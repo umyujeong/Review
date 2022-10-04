@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>password</th>
+        <th>title</th>
+        <th>coment</th>
+        <th>score</th>
+        <th>size_evaluation</th>
+        <th>color_evaluation</th>
+        <th>fabric_evaluation</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="review :${reviews}">
+        <td th:text="${review.id}"></td>
+        <td th:text="${review.password}"></td>
+        <td th:text="${review.title}"></td>
+        <td th:text="${review.coment}"></td>
+        <td th:text="${review.score}"></td>
+        <td th:text="${review.size_evaluation}"></td>
+        <td th:text="${review.color_evaluation}"></td>
+        <td th:text="${review.fabric_evaluation}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
