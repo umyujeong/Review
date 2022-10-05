@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:oracle:thin:@rds-dana-prod-db.cyolawjkrdab.ap-southeast-2.rds.amazonaws.com/TKDB
 
-    username: scott
+    username: admin
     password: 1234
     driver-class-name: oracle.jdbc.OracleDriver
 
