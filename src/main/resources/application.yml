@@ -1,6 +1,8 @@
+sever:
+  port: 9009
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:orcl
+    url: jdbc:oracle:thin:@rds-dana-prod-db.cyolawjkrdab.ap-southeast-2.rds.amazonaws.com/TKDB
 
     username: scott
     password: 1234
