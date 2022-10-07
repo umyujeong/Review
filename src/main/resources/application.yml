@@ -14,5 +14,3 @@ logging:
 
 mybatis:
   mapper-locations: mapper/*.xml
-
-

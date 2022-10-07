@@ -15,8 +15,8 @@
         select review_code, title, coment, score, size_evaluation, color_evaluation, fabric_evaluation
         from review
     </select>
-    <select id="findSizeAvg" resultType="com.example.review.dto.ReviewResponse">
-            select avg(size_evaluation)
+    <select id="findSizeAvg" resultType="com.example.review.dto.ReviewAvgResponse">
+            select avg(size_evaluation) as sizeAvg, avg(color_evaluation) as colorAvg,avg(fabric_evaluation) as fabricAvg
             from review
     </select>
 

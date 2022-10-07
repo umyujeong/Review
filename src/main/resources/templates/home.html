@@ -9,11 +9,12 @@
 <body>
 
 <form th:object="${form}">
-        <div class="form-group" style=" padding: 100px 500px 100px 500px;">
+        <div class="form-group" style=" padding: 100px 500px;">
             <h1>리뷰</h1>
             <br>
             <br>
             <a class="btn btn-lg btn-dark" href="/reviewlist">리뷰 목록</a>
+            <a class="btn btn-lg btn-dark" href="/avg">평가</a>
             <br>
             <br>
             <br>
@@ -26,7 +27,7 @@
                       cols="30" rows="5" placeholder="160자까지 입력할 수 있습니다."></textarea>
             <br>
 
-            <label th:for="score">총 점수</label>
+            <label th:for="score">총 점수(별점)</label>
             <select class="form-control" th:for="score" th:field="*{score}">
                 <option value=1>1</option>
                 <option value=2>2</option>

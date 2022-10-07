@@ -17,4 +17,6 @@ public class Review {
     private int color_evaluation;
     private int fabric_evaluation;
 
+
+
 }

@@ -1,6 +1,7 @@
 package com.example.review.service;
 
 import com.example.review.dto.Review;
+import com.example.review.dto.ReviewAvgResponse;
 import com.example.review.dto.ReviewResponse;
 import com.example.review.dao.ReviewDao;
 import lombok.RequiredArgsConstructor;
@@ -24,8 +25,12 @@ public class ReviewService {
         List<ReviewResponse> all = reviewDao.findAll();
         return all;
     }
-    public float findSizeAvg(){
-        float sizescore =reviewDao.findSizeAvg();
-        return sizescore;
+    public List<ReviewAvgResponse> findSizeAvg(){
+        List<ReviewAvgResponse> all = reviewDao.findSizeAvg();
+        System.out.println("service");
+        for (ReviewAvgResponse reviewAvgResponse : all) {
+            System.out.println(reviewAvgResponse.toString());
+        }
+        return all;
     }
 }

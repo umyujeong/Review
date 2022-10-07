@@ -1,6 +1,7 @@
 package com.example.review.controller;
 
 import com.example.review.dto.Review;
+import com.example.review.dto.ReviewAvgResponse;
 import com.example.review.dto.ReviewResponse;
 import com.example.review.service.ReviewService;
 import lombok.RequiredArgsConstructor;
@@ -32,9 +33,13 @@ public class HomeController {
     }
 
     /* size 조회 */
-    @GetMapping(value = "/a")
+    @GetMapping(value = "/avg")
     public String avglist(Model model) {
-        float avgs = reviewService.findSizeAvg();
+        List<ReviewAvgResponse> avgs = reviewService.findSizeAvg();
+        System.out.println("controller");
+        for (ReviewAvgResponse reviewAvgResponse : avgs) {
+            System.out.println(reviewAvgResponse.toString());
+        }
         model.addAttribute("avgs", avgs);
         return "avg";
     }
