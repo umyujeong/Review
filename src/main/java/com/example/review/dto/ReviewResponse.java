@@ -9,9 +9,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class ReviewResponse {
     private Long review_code;
-
-    private String id;
-    private String password;
     private String title;
     private String coment;
     private int score;

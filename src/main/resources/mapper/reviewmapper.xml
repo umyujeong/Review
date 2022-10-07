@@ -8,18 +8,16 @@
         <selectKey keyProperty="review_code" resultType="long" order="BEFORE">
             SELECT HIBERNATE_SEQUENCE.nextval From dual
         </selectKey>
-        insert into review( id, password, title, coment, score,size_evaluation, color_evaluation, fabric_evaluation)
-                                              values (#{id},#{password},#{title},#{coment},#{score},#{size_evaluation},#{color_evaluation},#{fabric_evaluation})
+        insert into review( title, coment, score,size_evaluation, color_evaluation, fabric_evaluation)
+                                              values (#{title},#{coment},#{score},#{size_evaluation},#{color_evaluation},#{fabric_evaluation})
     </insert>
     <select id="findAll" resultType="com.example.review.dto.ReviewResponse">
-        select review_code,id, PASSWORD, title, coment, score, size_evaluation, color_evaluation, fabric_evaluation
+        select review_code, title, coment, score, size_evaluation, color_evaluation, fabric_evaluation
         from review
     </select>
-<!--
-    <select id="findAll" resultType="int">
+    <select id="findSizeAvg" resultType="com.example.review.dto.ReviewResponse">
             select avg(size_evaluation)
             from review
     </select>
--->
 
 </mapper>

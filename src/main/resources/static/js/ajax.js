@@ -1,7 +1,5 @@
 function dataSend(){
     let reviewDto={
-        id: $('#id').val(),
-        password: $('#password').val(),
         title: $('#title').val(),
         coment: $('#coment').val(),
         score: $('#score').val(),

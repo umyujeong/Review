@@ -20,8 +20,6 @@ public class ReviewRestController {
     @RequestMapping(value = "/reviewDto", method = RequestMethod.POST)
     public Review dataSend(ReviewForm form){
         Review review =new Review();
-        review.setId(form.getId());
-        review.setPassword(form.getPassword());
         review.setTitle(form.getTitle());
         review.setComent(form.getComent());
         review.setScore(form.getScore());

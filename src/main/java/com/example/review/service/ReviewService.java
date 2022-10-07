@@ -24,8 +24,8 @@ public class ReviewService {
         List<ReviewResponse> all = reviewDao.findAll();
         return all;
     }
-    public int findSizeAvg(){
-        int sizescore =reviewDao.findSizeAvg();
+    public float findSizeAvg(){
+        float sizescore =reviewDao.findSizeAvg();
         return sizescore;
     }
 }

@@ -31,8 +31,13 @@ public class HomeController {
         return "reviewlist";
     }
 
-    /* sdfasfsf*/
-
+    /* size 조회 */
+    @GetMapping(value = "/a")
+    public String avglist(Model model) {
+        float avgs = reviewService.findSizeAvg();
+        model.addAttribute("avgs", avgs);
+        return "avg";
+    }
 
 
 }
